@@ -40,7 +40,7 @@
 
     <!-- START FOOTER -->
     <div class="navbar fixed-bottom navbar-light bg-light border-top border-1">
-        <div class="footer m-0" style='font-size:90%;color:#666'>
+        <div class="footer m-0" style='font-size:75%;color:#666'>
             <p class="mx-3 mb-0">
               This website is maintained by the OpenACS community. Any problems, email <a href="mailto:@signatory@">webmaster</a> or <a href="/bugtracker/openacs.org/">submit</a> a bug report.
 <br>
