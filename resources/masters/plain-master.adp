@@ -34,7 +34,7 @@
     </if>
     
     <div class="block-marker">Begin main content</div>
-    <div class="m-3 main-content" style="margin-bottom:100px;">
+    <div class="mx-3 mt-3 main-content" style="margin-bottom:60px;">
         <slave>
     </div>
 
