@@ -39,9 +39,9 @@
     </div>
 
     <!-- START FOOTER -->
-    <div class="navbar navbar-light navbar-fixed-bottom" style="border-color:#ccc;">
-        <div class="footer" style='margin-top:0;font-size:90%;color:#666;padding-top:5px;'>
-            <p style="margin:0;">
+    <div class="navbar fixed-bottom navbar-light bg-light border-top border-1">
+        <div class="footer m-0" style='font-size:90%;color:#666'>
+            <p class="mx-3 mb-0">
               This website is maintained by the OpenACS community. Any problems, email <a href="mailto:@signatory@">webmaster</a> or <a href="/bugtracker/openacs.org/">submit</a> a bug report.
 <br>
               (Powered by Tcl<a href="http://www.tcl.tk/"><img alt="Tcl Logo" src="/resources/openacs-bootstrap5-theme/images/plume.png" width="14" height="13"></a>, 
