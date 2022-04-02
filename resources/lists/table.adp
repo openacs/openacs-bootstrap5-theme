@@ -153,7 +153,7 @@
 <noparse>
   <if \@@list_properties.multirow@:rowcount@ eq 0>
     <tbody>
-    <tr class="list-odd last">
+    <tr class="last">
         <td colspan="@elements:rowcount@">
         @list_properties.no_data@
       </td>
@@ -183,20 +183,10 @@
         
   <noparse>
           <if \@@list_properties.multirow@.rownum@ lt \@@list_properties.multirow@:rowcount@>
-            <if \@@list_properties.multirow@.rownum@ odd>
-              <tr class="odd">
-            </if>
-            <else>
-              <tr class="even">
-            </else>
+            <tr class="">
           </if>
           <else>
-            <if \@@list_properties.multirow@.rownum@ odd>
-              <tr class="odd last">
-            </if>
-            <else>
-              <tr class="even last">
-            </else>
+            <tr class="last">
           </else>
   </noparse>
 

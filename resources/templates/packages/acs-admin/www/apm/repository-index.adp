@@ -4,7 +4,7 @@
 <h2> Available channels: </h2>
 
 <div class="row">
-    <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
+    <div class="col-xl-4 col-lg-6 col-sm-8 col-12">
     
         <p>This is a list of the current and previous OpenACS releases and their contained packages. The information on the following pages includes a description of each package, their level of maturity, their co-dependencies with other packages and a bug tracker summary.</p>
         

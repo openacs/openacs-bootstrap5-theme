@@ -94,7 +94,7 @@
 </if>
 
 <div class="row">
-    <div class="col-lg-8 col-md-10 col-xs-12">
+    <div class="col-xl-8 col-lg-10 col-12">
         <table class="table table-striped" cellpadding="3" cellspacing="1"@list_properties.table_attributes;noquote@>
           <if "@list_properties.caption@" ne ""><caption>@list_properties.caption;noquote@</caption></if>
           <multiple name="elements">
@@ -154,7 +154,7 @@
         <noparse>
           <if \@@list_properties.multirow@:rowcount@ eq 0>
             <tbody>
-            <tr class="list-odd last">
+            <tr class="list-last">
                 <td colspan="@elements:rowcount@">
                 @list_properties.no_data@
               </td>
@@ -184,20 +184,10 @@
                 
           <noparse>
                   <if \@@list_properties.multirow@.rownum@ lt \@@list_properties.multirow@:rowcount@>
-                    <if \@@list_properties.multirow@.rownum@ odd>
-                      <tr class="odd">
-                    </if>
-                    <else>
-                      <tr class="even">
-                    </else>
+                    <tr>
                   </if>
                   <else>
-                    <if \@@list_properties.multirow@.rownum@ odd>
-                      <tr class="odd last">
-                    </if>
-                    <else>
-                      <tr class="even last">
-                    </else>
+                    <tr class="last">
                   </else>
           </noparse>
         
