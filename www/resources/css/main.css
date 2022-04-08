@@ -269,16 +269,16 @@ a.acs-lang-missing {
 }
 a.acs-lang-localized::after {
     color: green;
-    font-family: 'Glyphicons Halflings';
-    content: "\e013"; /* glyphicon-ok */
+    font-family: 'bootstrap-icons' !important;
+    content: "\f26e"; /* bi-check */
 }
 a.acs-lang-us_only::after {
     color: orange;
-    font-family: 'Glyphicons Halflings';
-    content: "\e136"; /* glyphicon-wrench */
+    font-family: 'bootstrap-icons' !important;
+    content: "\f621"; /* bi-wrench */
 }
 a.acs-lang-missing::after {
     color: red;
-    font-family: 'Glyphicons Halflings';
-    content:  "\e209"; /* glyphicon-alert */
+    font-family: 'bootstrap-icons' !important;
+    content:  "\f33a"; /* bi-exclamation-triangle-fill */
 }

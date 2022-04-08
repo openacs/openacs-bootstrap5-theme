@@ -1,6 +1,6 @@
 <if @login_p;literal@ true>
     <li class="dropdown" style="z-index:1100;">
-        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" style="padding-top:8px;padding-bottom:0;">@photo;noquote@ <em class="glyphicon glyphicon-chevron-down"></em></a>
+        <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" style="padding-top:8px;padding-bottom:0;">@photo;noquote@ <i class="bi bi-chevron-down"></i></a>
         <ul class="dropdown-menu">
             <li>
                 <!-- user greeting or login message -->

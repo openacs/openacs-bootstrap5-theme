@@ -23,7 +23,7 @@
 	<if @pkgs.vendor@ not nil> by @pkgs.vendor@</if>
 	<if @pkgs.maturity@ not nil><br>@pkgs.maturity@: @pkgs.maturity_text@</if><br>
         <a href="./@pkgs.package_key@-@pkgs.version@.apm"  download target="_blank">
-          <span class="glyphicon glyphicon-download-alt"></span>
+          <adp:icon name="download">
           Download Package</a>
 	</small>
       </td>

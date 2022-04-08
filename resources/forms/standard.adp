@@ -101,7 +101,7 @@
 							
            <if @elements.help_text@ not nil>
              <span class="form-help-text">
-	         <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+       	         <adp:icon name="form-info-sign">
                  <noparse><formhelp id="@elements.id@"></noparse>
              </span> <!-- /form-help-text -->
            </if>
