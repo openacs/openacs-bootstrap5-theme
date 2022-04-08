@@ -7,6 +7,10 @@ ad_proc -private openacs_bootstrap5_theme::apm::after_install {} {
 } {
 
     # Insert this package's themes
+    #
+    # Note: we are still using jquery -- should be addressed, when we
+    # are done with other issues.
+    #
     db_transaction {
         subsite::new_subsite_theme \
             -create_or_replace \
