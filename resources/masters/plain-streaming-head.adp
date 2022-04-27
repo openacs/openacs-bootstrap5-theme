@@ -1,6 +1,6 @@
 <master src="/www/blank-master">
 <property name="&doc">doc</property>
-<if @streaming_head@ defined><property name="streaming_head">@streaming_head;noquote@</property></if>
+<if @streaming_head@ defined><property name="streaming_head">@streaming_head;literal@</property></if>
 
 <div class="container-fluid">
     <!-- START HEADER -->
