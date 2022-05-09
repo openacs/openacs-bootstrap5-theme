@@ -79,14 +79,16 @@ util_get_user_messages -multirow user_messages
 #
 set csrf [security::csrf::new]
 
-security::csp::require img-src ipv6-test.com
+#security::csp::require img-src ipv6-test.com
 
-security::csp::require style-src maxcdn.bootstrapcdn.com
-security::csp::require script-src maxcdn.bootstrapcdn.com
+#security::csp::require style-src maxcdn.bootstrapcdn.com
+#security::csp::require script-src maxcdn.bootstrapcdn.com
 
-security::csp::require font-src 'self'
-security::csp::require font-src maxcdn.bootstrapcdn.com
+#security::csp::require font-src 'self'
+#security::csp::require font-src maxcdn.bootstrapcdn.com
 
+# standard bootstrap 5 uses data: images (for svg)
+security::csp::require img-src data:
 
 # Local variables:
 #    mode: tcl
