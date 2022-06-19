@@ -11,12 +11,7 @@ set system_name [ad_system_name]
 set portrait_id [acs_user::get_portrait_id -user_id $user_id]
 if {$portrait_id == 0} {
     set email [party::email -party_id $user_id]
-    if {[info commands ns_md5] ne ""} {
-        set md5 [string tolower [ns_md5 $email]]
-    } else {
-        package require md5
-        set md5 [string tolower [md5::Hex [md5::md5 -- $email]]]
-    }
+    set md5 [string tolower [ns_md5 $email]]
     set src //www.gravatar.com/avatar/$md5?size=35&d=mm
     security::csp::require img-src www.gravatar.com
 } else {
