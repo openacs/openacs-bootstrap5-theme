@@ -8,10 +8,6 @@ subsite_navigation::define_pageflow -navigation_multirow navigation -group main 
 set subsite_logo "/resources/openacs-bootstrap5-theme/images/logo_dotlrn_xs.png"
 set streaming_head 1
 
-if {![info exists subsite_link]} {
-    set subsite_link "/"
-}
-
 set doc(title) $title
 ad_context_bar_multirow -- $context
 

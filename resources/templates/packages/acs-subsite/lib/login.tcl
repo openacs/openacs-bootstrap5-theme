@@ -85,7 +85,7 @@ set password_autocomplete [parameter::get \
                                 -package_id $subsite_id \
                                 -default "current-password"]
 
-set subsite_url [subsite::get_element -element url]
+set subsite_url [subsite::get_element -subsite_id $subsite_id -element url]
 set system_name [ad_system_name]
 
 if { $return_url ne "" } {

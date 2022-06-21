@@ -10,10 +10,6 @@ set subsite_logo ""
 
 set streaming_head 1
 
-if {![info exists subsite_link]} {
-    set subsite_link "/"
-}
-
 set doc(title) $title
 ad_context_bar_multirow -- $context
 

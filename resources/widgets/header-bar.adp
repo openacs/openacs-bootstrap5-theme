@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/" style="padding:3px;">
-      <if @subsite_logo@ not nil><img src="@subsite_logo@" alt="Home"></if>
+    <a class="navbar-brand" href="@subsite_url;literal@" style="padding:3px;">
+      <if @subsite_logo@ not nil><img src="@subsite_logo;literal@" alt="Home"></if>
       <else><div>#acs-subsite.Subsite_Home#</div></else>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">

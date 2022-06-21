@@ -7,9 +7,6 @@ subsite_navigation::define_pageflow -navigation_multirow navigation -group main 
 
 set subsite_logo "/resources/openacs-bootstrap5-theme/images/logo_dotlrn_xs.png"
 
-set subsite_id [ad_conn subsite_id]
-set subsite_link [subsite::get_element -subsite_id $subsite_id -element url]
-
 # Local variables:
 #    mode: tcl
 #    tcl-indent-level: 4

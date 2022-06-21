@@ -28,11 +28,8 @@ set pkid [ad_conn package_id]
 if {![info exists title]}     { set title     [ad_system_name]   }
 if {![info exists signatory]} { set signatory [ad_system_owner] }
 
-if {![info exists subsite_link]} {
-    set subsite_link "/"
-}
-
-set subsite_url [subsite::get_element -element url]
+set subsite_id [ad_conn subsite_id]
+set subsite_url [subsite::get_element -subsite_id $subsite_id -element url]
 set subsite_name [lang::util::localize [subsite::get_element -element instance_name]]
 
 template::head::add_meta \
