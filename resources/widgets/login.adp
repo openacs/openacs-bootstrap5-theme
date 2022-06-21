@@ -4,7 +4,7 @@
         <ul class="dropdown-menu dropdown-menu-lg-end">
             <li class="dropdown-item">
                 <!-- user greeting or login message -->
-                <a href="/pvt/home">#acs-subsite.Welcome_user#  </a>
+                <a href="@subsite_url;literal@pvt/home">#acs-subsite.Welcome_user#  </a>
             </li>
 
             <li class="dropdown-item">
@@ -21,7 +21,7 @@
             </li>
             <li class="divider"></li>
             <li class="dropdown-item">
-                <a href="/register/logout" title="#acs-subsite.Logout_from_system#">#acs-subsite.Logout#</a>
+                <a href="@subsite_url;literal@register/logout" title="#acs-subsite.Logout_from_system#">#acs-subsite.Logout#</a>
             </li>
         </ul>
     </li>

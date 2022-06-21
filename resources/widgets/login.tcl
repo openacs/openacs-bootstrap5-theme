@@ -26,7 +26,7 @@ set whos_online_url "[subsite::get_element -element url]shared/whos-online"
 set return_url [ad_return_url]
 if {!$user_id} {
     set login_p 0
-    set login_url [export_vars -base /register/ return_url]
+    set login_url [export_vars -base $subsite_url/register/ return_url]
     set register_url [export_vars -base /register/user-new return_url]
 } else {
     set login_p 1

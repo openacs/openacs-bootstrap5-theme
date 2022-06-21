@@ -14,7 +14,7 @@
         <if @navigation:rowcount@ defined>
           <widget src="navigation" &="navigation" ds="0" &="subsite_url" &="subsite_name">
         </if>
-        <widget src="login" ds="0" >
+        <widget src="login" ds="0" &="subsite_url">
       </ul>
     </div><!-- /.navbar-collapse -->
 
