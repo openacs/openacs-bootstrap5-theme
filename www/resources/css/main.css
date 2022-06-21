@@ -65,49 +65,24 @@ div.footer {
 .table-auto {
     width:auto;
 }
-.main-nav {
-    font-weight: normal;
-    color: #fff;
-    margin-bottom:2px;
+.header .navbar-dark a {
+    text-decoration:none;
 }
-.navbar {
-    border-radius:0;
+.header .navbar-dark a:hover,
+.header .navbar-dark a:active,
+.header .navbar-dark a:focus,
+.header .navbar-dark a:visited,
+.header .navbar-dark a:target {
+    background:rgba(255,255,255,0.2);
 }
-.main-nav .navbar-nav > li > a:hover,
-.main-nav .navbar-nav > li > a:focus,
-.main-nav .navbar-nav > li > a:visited {
-    color: #fff;
+.header .navbar-dark li.active > a,
+.header .navbar-dark .active > a, 
+.header .navbar-dark .active > a:hover, 
+.header .navbar-dark .active > a:focus {
+    background-color: rgba(255,255,255,.2);
 }
-.main-nav .navbar-nav > li > a {
-    color:#fff;
-    padding:15px 13px;
-}
-.navbar-header a.navbar-brand div { 
-    color:#fff;
-    padding:12px 13px;
-}
-
-.main-nav .navbar-nav > li.active > a,
-.main-nav .navbar-nav > .active > a, 
-.main-nav .navbar-nav > .active > a:hover, 
-.main-nav .navbar-nav > .active > a:focus {
-    background-color: #fff;
-}
-.main-nav .navbar-toggler:hover, .main-nav .navbar-toggler:focus {
-    background-color:#0495DE;
-}
-.main-nav .navbar-light .navbar-nav > .open > a, 
-.main-nav .navbar-light .navbar-nav > .open > a:hover, 
-.main-nav .navbar-light .navbar-nav > .open > a:focus,
-.main-nav .navbar-light .navbar-nav > .open > a:visited,
-.main-nav .nav .open > a, 
-.main-nav .nav .open > a:hover, 
-.main-nav .nav .open > a:focus,
-.main-nav .nav .open > a:visited {
-    background-color:#fff;
-}
-.main-nav .navbar-nav .open .dropdown-menu {
-    background-color:#fff;
+.header .navbar-dark button.navbar-toggler {
+    background-color: rgba(255,255,255,.2);
 }
 
 div.searchfield .search {

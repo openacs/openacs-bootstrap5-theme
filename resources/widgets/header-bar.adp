@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="@subsite_url;literal@" style="padding:3px;">
       <if @subsite_logo@ not nil><img src="@subsite_logo;literal@" alt="Home"></if>
