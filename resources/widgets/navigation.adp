@@ -4,7 +4,7 @@
         <multiple name="navigation">
             <if @navigation.parent@ eq "">
                 <if @navigation.submenu@ not nil>
-                    <li<if @navigation.id@ not nil> id="@navigation.id@" class="nav-item active dropdown"</if><else> class="nav-item"</else>>
+                    <li<if @navigation.id@ not nil> id="@navigation.id@" class="nav-item active dropdown"</if><else> class="nav-item dropdown"</else>>
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" 
                         <if @navigation.class@ not nil> class="@navigation.class;noquote@"</if>
                         <if @navigation.title@ not nil> title="@navigation.title;noquote@"</if>
@@ -13,8 +13,8 @@
                         <if @navigation.tabindex@ not nil> tabindex="@navigation.tabindex;noquote@"</if>>
                         <if @navigation.display_template@ not nil>@navigation.display_template;noquote@</if>
                         <else>@navigation.label@</else>
-                        <span class="caret"></span></a>
-                        <ul class="dropdown-menu">@navigation.submenu;noquote@</ul>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-lg-end">@navigation.submenu;noquote@</ul>
                     </li>
                 </if>
                 <else>

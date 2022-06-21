@@ -282,3 +282,16 @@ a.acs-lang-missing::after {
     font-family: 'bootstrap-icons' !important;
     content:  "\f33a"; /* bi-exclamation-triangle-fill */
 }
+
+body ul.action-links li:before {
+    font-family: 'bootstrap-icons' !important;
+    content:  "\f134"; /* bi-arrow-right-circle */
+    margin-top: 2px;
+    font-size: smaller;
+    margin-right: 2px;
+    margin-left: -22px;
+    float: left;
+}
+body ul.action-links li {
+    list-style: none;
+}

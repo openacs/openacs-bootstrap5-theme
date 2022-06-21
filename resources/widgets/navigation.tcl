@@ -32,7 +32,7 @@ for {set i 1} {$i <= [template::multirow size navigation]} {incr i} {
         set item_html [template::adp_eval template_code]
         set navigation(display_template) $item_html
     } else {
-        set item_html "<li><a href='$navigation(href)'>[ns_quotehtml $navigation(label)]</a></li>"
+        set item_html "<li class='dropdown-item'><a href='$navigation(href)'>[ns_quotehtml $navigation(label)]</a></li>"
     }
     set nav_parent $navigation(parent)
     if {$nav_parent ne ""} {
