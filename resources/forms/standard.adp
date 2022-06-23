@@ -11,15 +11,20 @@
   
 	  <else>
 		<if @elements.widget;literal@ eq "submit"><!-- if form submit button wrap it in the form-button class -->
-  		 <div class="form-button">
+  		<div class="form-group mb-3">
            <group column="widget">
-             <noparse><formwidget id="@elements.id@">&nbsp;</noparse>
+             <noparse><formwidget id="@elements.id@" class="btn btn-outline-secondary">&nbsp;</noparse>
            </group>
   		 </div>
        </if>
         
-	   <else> <!-- wrap the form item in the form-item-wrapper class -->
-	     <div class="form-item-wrapper">
+	   <else> <!-- wrap the form item in the form-group class -->
+	       <if @elements.widget;literal@ in radio checkbox>
+	           <div class="form-check mb-3">
+	       </if>
+	       <else>
+	           <div class="form-group mb-3">
+	       </else>
            <noparse>
 			 <formerror id="@elements.id@">
 			   <span class="form-error">
@@ -81,29 +86,25 @@
 
 		     <if @elements.widget;literal@ in radio checkbox>
                            <noparse>
-                 <span class="form-widget">
-                 <formgroup id="@elements.id@">			
-				   <label for="@elements.form_id@:elements:@elements.id@:\@formgroup.option@">
-				     \@formgroup.widget;noquote@
+                 <formgroup id="@elements.id@" class="form-check-input">	
+                    \@formgroup.widget;noquote@
+				   <label class="form-check-label" for="@elements.form_id@:elements:@elements.id@:\@formgroup.option@">
 					 \@formgroup.label;noquote@
-				   </label><br>
+				   </label>
 				 </formgroup>
-                 </span>
 			   </noparse>
              </if>
 			 <else>
 			   <noparse>
-                 <span class="form-widget">
-                   <formwidget id="@elements.id@">
-                 </span>
+                   <formwidget id="@elements.id@" class="form-control">
 			   </noparse>
              </else>							
 							
            <if @elements.help_text@ not nil>
-             <span class="form-help-text">
+             <span class="form-text">
        	         <adp:icon name="form-info-sign">
                  <noparse><formhelp id="@elements.id@"></noparse>
-             </span> <!-- /form-help-text -->
+             </span> <!-- /form-text -->
            </if>
 
 		   <if @elements.widget;literal@ in radio checkbox> 
@@ -112,7 +113,7 @@
 			   </fieldset>
              </if>
 		   </if>
-		 </div> <!-- form-item-wrapper -->
+		 </div> <!-- form-group -->
        </else>
 	</else>
   </group>

@@ -104,10 +104,10 @@
              </else>							
 							
            <if @elements.help_text@ not nil>
-             <span class="col-sm-offset-2 col-sm-10 form-help-text">
+             <span class="col-sm-offset-2 col-sm-10 form-text">
   	         <adp:icon name="form-info-sign">
                  <noparse><formhelp id="@elements.id@"></noparse>
-             </span> <!-- /form-help-text -->
+             </span> <!-- /form-text -->
            </if>
 
 		   <if @elements.widget;literal@ in radio checkbox> 
