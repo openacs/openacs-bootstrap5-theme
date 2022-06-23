@@ -22,14 +22,16 @@ set photo "<img width='35' height='35' class='photo' src='[ns_quotehtml $src]'>"
 # Who's Online
 set num_users_online [lc_numeric [whos_online::num_users]]
 set whos_online_url "[subsite::get_element -element url]shared/whos-online"
-
 set return_url [ad_return_url]
+set subsite_url [site_node::get_url -node_id [ad_conn subsite_node_id]]
+
 if {!$user_id} {
     set login_p 0
     set login_url [export_vars -base $subsite_url/register/ return_url]
     set register_url [export_vars -base /register/user-new return_url]
 } else {
     set login_p 1
+    set logout_url "$subsite_url/register/logout"
     #set name [person::name -person_id $user_id]
     set name [person::get_person_info -person_id $user_id -element first_names]
 }
