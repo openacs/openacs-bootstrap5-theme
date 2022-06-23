@@ -44,7 +44,7 @@
                    <!-- no label tag -->
                  </if>
                  <else>
-				   <label class="control-label col-sm-2" for="@elements.id@">
+				   <label class="col-form-label col-sm-2" for="@elements.id@">
                  </else>
 
                  <if \@formerror.@elements.id@\@ not nil>

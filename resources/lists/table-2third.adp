@@ -26,7 +26,7 @@
                 <li><a href="\@paginator_pages.url@" title="\@paginator_pages.context@">\@paginator_pages.page@</a></li>
               </if>
               <else>
-                <li class="active"><a href="#">\@paginator_pages.page@ <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="#">\@paginator_pages.page@ <span class="visually-hidden">(current)</span></a></li>
               </else>
             </multiple>
 
@@ -275,7 +275,7 @@
                 <li><a href="\@paginator_pages.url@" title="\@paginator_pages.context@">\@paginator_pages.page@</a></li>
               </if>
               <else>
-                <li class="active"><a href="#">\@paginator_pages.page@ <span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="#">\@paginator_pages.page@ <span class="visually-hidden">(current)</span></a></li>
               </else>
             </multiple>
 

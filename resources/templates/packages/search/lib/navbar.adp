@@ -16,7 +16,7 @@
       </else>
       <multiple name="results_paginator">
         <if @results_paginator.current_p;literal@ true>
-          <li class="active"><a href="#">@results_paginator.item@ <span class="sr-only">(current)</span></a></li>
+          <li class="active"><a href="#">@results_paginator.item@ <span class="visually-hidden">(current)</span></a></li>
         </if>
         <else>
           <li><a href="@results_paginator.link@" title="@results_paginator.item@">@results_paginator.item@</a></li>

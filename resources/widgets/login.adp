@@ -19,7 +19,7 @@
                     #acs-subsite.Online#
                 </a>
             </li>
-            <li class="divider"></li>
+            <li class="dropdown-divider"></li>
             <li class="dropdown-item">
                 <a href="@subsite_url;literal@register/logout" title="#acs-subsite.Logout_from_system#">#acs-subsite.Logout#</a>
             </li>

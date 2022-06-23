@@ -25,7 +25,7 @@
         <div id="bootstrap5-alert-message">
             <multiple name="user_messages">
                 <div class="alert alert-success">
-		    <a class="close" data-bs-dismiss="alert">×</a>
+		    <a class="btn-close" data-bs-dismiss="alert">×</a>
 		    <i class="bi bi-info-square-fill"></i>
                     @user_messages.message;noquote@
                 </div>
