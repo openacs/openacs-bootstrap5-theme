@@ -1,5 +1,5 @@
 namespace eval openacs_bootstrap5_theme {
-    set bootstrap_version 5.1.3
+    set bootstrap_version 5.2.0
 
     ad_proc -private ::openacs_bootstrap5_theme::resource_info {} {
 
@@ -24,8 +24,8 @@ namespace eval openacs_bootstrap5_theme {
 	    set prefix  $resourceUrl/$version
 	    set cdnHost ""
 	} else {
-            # https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css
-            # https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js            
+            # https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css
+            # https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js            
 	    set prefix $cdn/bootstrap@$version/dist
 	}
 
