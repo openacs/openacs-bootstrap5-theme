@@ -10,7 +10,6 @@ if {$version eq ""} {
     set version $::openacs_bootstrap5_theme::bootstrap_version
 }
 ::util::resources::download \
-    -version_dir $version \
     -resource_info [::openacs_bootstrap5_theme::resource_info]
 
 ad_returnredirect .
