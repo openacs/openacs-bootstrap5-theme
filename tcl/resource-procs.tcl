@@ -42,8 +42,8 @@ namespace eval openacs_bootstrap5_theme {
             cdn $cdn \
             cdnHost $cdnHost \
             prefix $prefix \
-            cssFiles {css/bootstrap.min.css} \
-            jsFiles  {js/bootstrap.bundle.min.js} \
+            cssFiles {css/bootstrap.min.css css/bootstrap.min.css.map} \
+            jsFiles  {js/bootstrap.bundle.min.js js/bootstrap.bundle.min.js.map} \
             extraFiles {} \
             urnMap {
                 urn:ad:css:bootstrap5 css/bootstrap.min.css
