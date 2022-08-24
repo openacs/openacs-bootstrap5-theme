@@ -24,7 +24,7 @@ set num_users_online [lc_numeric [whos_online::num_users]]
 set whos_online_url "[subsite::get_element -element url]shared/whos-online"
 set return_url [ad_return_url]
 set subsite_url [site_node::get_url -node_id [ad_conn subsite_node_id]]
-ns_log notice "subsite_url <$subsite_url>"
+#ns_log notice "subsite_url <$subsite_url>"
 
 if {!$user_id} {
     set login_p 0
