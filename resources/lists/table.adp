@@ -86,7 +86,7 @@
   <div class="list-button-bar-top">
     <ul class="compact">
       <multiple name="actions">
-        <li><a href="@actions.url@" title="@actions.title@" class="btn btn-default">@actions.label@</a></li>
+        <li><a href="@actions.url@" title="@actions.title@" class="btn btn-outline-secondary">@actions.label@</a></li>
       </multiple>
     </ul>
   </div>
@@ -104,10 +104,10 @@
           <if @elements.orderby_url@ not nil>
             <if @elements.ordering_p;literal@ true>
               <a href="@elements.orderby_url@" title="@elements.orderby_html_title@">@elements.label;noquote@</a>
-              <a href="@elements.orderby_url@" title="@elements.orderby_html_title@"><if @elements.orderby_direction@ eq "desc"><img src="/resources/acs-templating/sort-descending.png" alt="#acs-templating.descending_order#" style="border:0;" width="10" height="10"></if><else><img src="/resources/acs-templating/sort-ascending.png" alt="#acs-templating.ascending_order#" style="border:0;" width="10" height="10"></else></a>
+              <a href="@elements.orderby_url@" title="@elements.orderby_html_title@"><if @elements.orderby_direction@ eq "desc"><span title="#acs-templating.descending_order#">↓</span></if><else><span title="#acs-templating.ascending_order#">↑</span></else></a>
             </if>
             <else>
-              <a href="@elements.orderby_url@" title="@elements.orderby_html_title@">@elements.label;noquote@</a> <img src="/resources/acs-templating/sort-neither.png" alt="#acs-templating.not_ordered#" style="border:0;" width="10" height="10">
+              <a href="@elements.orderby_url@" title="@elements.orderby_html_title@">@elements.label;noquote@</a> <a href="@elements.orderby_url@"><span title="#acs-templating.not_ordered#">↑↓</span></a>
             </else>
           </if>
           <else>
@@ -238,7 +238,7 @@
 	<% template::add_event_listener -id "$list_properties(name)-bulk_action-$bulk_actions(rownum)" -script [subst {
 	    $list_properties(bulk_action_click_function)('$list_properties(name)', '$bulk_actions(url)');
 	}] %>
-        <input type="submit" title="@bulk_actions.title@" id="@list_properties.name;literal@-bulk_action-@bulk_actions.rownum;literal@" value="@bulk_actions.label@" class="btn btn-default">	
+        <input type="submit" title="@bulk_actions.title@" id="@list_properties.name;literal@-bulk_action-@bulk_actions.rownum;literal@" value="@bulk_actions.label@" class="btn btn-outline-secondary">	
         </multiple>
     </div>
     <!-- end of list-button-bar-bottom div -->
