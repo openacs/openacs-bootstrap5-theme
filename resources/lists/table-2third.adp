@@ -8,40 +8,40 @@
           <if \@paginator.page_count@ gt 1>
             <if \@paginator.group_count@ gt 1 and \@paginator.groupsize@ gt 1>
               <if \@paginator.previous_group_url@ not nil>
-                <li><a href="\@paginator.previous_group_url@" title="\@paginator.previous_group_context@">&laquo;</a></li>
+                <li class="page-item"><a class="page-link" href="\@paginator.previous_group_url@" title="\@paginator.previous_group_context@">&laquo;</a></li>
               </if>
               <else>
-               <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+               <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
               </else>
             </if>
             <if \@paginator.previous_page_url@ not nil>
-              <li><a aria-label="Previous" href="\@paginator.previous_page_url@" title="\@paginator.previous_page_context@"><span aria-hidden="true">&lsaquo;</span></a></li>
+              <li class="page-item"><a class="page-link" aria-label="Previous" href="\@paginator.previous_page_url@" title="\@paginator.previous_page_context@"><span aria-hidden="true">&lsaquo;</span></a></li>
             </if>
             <else>
-               <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&lsaquo;</span></a></li>
+               <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&lsaquo;</span></a></li>
             </else>
     
             <multiple name="paginator_pages">
               <if \@paginator.current_page@ ne \@paginator_pages.page@>
-                <li><a href="\@paginator_pages.url@" title="\@paginator_pages.context@">\@paginator_pages.page@</a></li>
+                <li class="page-item"><a class="page-link" href="\@paginator_pages.url@" title="\@paginator_pages.context@">\@paginator_pages.page@</a></li>
               </if>
               <else>
-                <li class="active"><a href="#">\@paginator_pages.page@ <span class="visually-hidden">(current)</span></a></li>
+                <li class="page-item active"><a class="page-link" href="#">\@paginator_pages.page@ <span class="visually-hidden">(current)</span></a></li>
               </else>
             </multiple>
 
             <if \@paginator.next_page_url@ not nil>
-              <li><a aria-label="Next" href="\@paginator.next_page_url@" title="\@paginator.next_page_context@"><span aria-hidden="true">&rsaquo;</span></a></li>
+              <li class="page-item"><a class="page-link" aria-label="Next" href="\@paginator.next_page_url@" title="\@paginator.next_page_context@"><span aria-hidden="true">&rsaquo;</span></a></li>
             </if>
             <else>
-               <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&rsaquo;</span></a></li>
+               <li class="page-item disabled"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&rsaquo;</span></a></li>
             </else>
             <if \@paginator.group_count@ gt 1 and \@paginator.groupsize@ gt 1>
               <if \@paginator.next_group_url@ not nil>
-                <li><a href="\@paginator.next_group_url@" title="\@paginator.next_group_context@">&raquo;</a></li>
+                <li class="page-item"><a class="page-link" href="\@paginator.next_group_url@" title="\@paginator.next_group_context@">&raquo;</a></li>
               </if>
               <else>
-               <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+               <li class="page-item disabled"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
               </else>
             </if>
           </if>
@@ -257,40 +257,40 @@
           <if \@paginator.page_count@ gt 1>
             <if \@paginator.group_count@ gt 1 and \@paginator.groupsize@ gt 1>
               <if \@paginator.previous_group_url@ not nil>
-                <li><a href="\@paginator.previous_group_url@" title="\@paginator.previous_group_context@">&laquo;</a></li>
+                <li class="page-item"><a class="page-link" href="\@paginator.previous_group_url@" title="\@paginator.previous_group_context@">&laquo;</a></li>
               </if>
               <else>
-               <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+               <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
               </else>
             </if>
             <if \@paginator.previous_page_url@ not nil>
-              <li><a aria-label="Previous" href="\@paginator.previous_page_url@" title="\@paginator.previous_page_context@"><span aria-hidden="true">&lsaquo;</span></a></li>
+              <li class="page-item"><a class="page-link" aria-label="Previous" href="\@paginator.previous_page_url@" title="\@paginator.previous_page_context@"><span aria-hidden="true">&lsaquo;</span></a></li>
             </if>
             <else>
-               <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&lsaquo;</span></a></li>
+               <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&lsaquo;</span></a></li>
             </else>
 
             <multiple name="paginator_pages">
               <if \@paginator.current_page@ ne \@paginator_pages.page@>
-                <li><a href="\@paginator_pages.url@" title="\@paginator_pages.context@">\@paginator_pages.page@</a></li>
+                <li class="page-item"><a class="page-link" href="\@paginator_pages.url@" title="\@paginator_pages.context@">\@paginator_pages.page@</a></li>
               </if>
               <else>
-                <li class="active"><a href="#">\@paginator_pages.page@ <span class="visually-hidden">(current)</span></a></li>
+                <li class="page-item active"><a class="page-link" href="#">\@paginator_pages.page@ <span class="visually-hidden">(current)</span></a></li>
               </else>
             </multiple>
 
             <if \@paginator.next_page_url@ not nil>
-              <li><a aria-label="Next" href="\@paginator.next_page_url@" title="\@paginator.next_page_context@"><span aria-hidden="true">&rsaquo;</span></a></li>
+              <li class="page-item"><a class="page-link" aria-label="Next" href="\@paginator.next_page_url@" title="\@paginator.next_page_context@"><span aria-hidden="true">&rsaquo;</span></a></li>
             </if>
             <else>
-               <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&rsaquo;</span></a></li>
+               <li class="page-item disabled"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&rsaquo;</span></a></li>
             </else>
             <if \@paginator.group_count@ gt 1 and \@paginator.groupsize@ gt 1>
               <if \@paginator.next_group_url@ not nil>
-                <li><a href="\@paginator.next_group_url@" title="\@paginator.next_group_context@">&raquo;</a></li>
+                <li class="page-item"><a class="page-link" href="\@paginator.next_group_url@" title="\@paginator.next_group_context@">&raquo;</a></li>
               </if>
               <else>
-               <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+               <li class="page-item disabled"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
               </else>
             </if>
           </if>
