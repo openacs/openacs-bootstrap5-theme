@@ -1,5 +1,5 @@
 namespace eval openacs_bootstrap5_theme {
-    set bootstrap_version 5.2.2
+    set bootstrap_version 5.2.3
 
     ad_proc -private ::openacs_bootstrap5_theme::resource_info {} {
 
@@ -30,8 +30,8 @@ namespace eval openacs_bootstrap5_theme {
             set prefix $resourceUrl/$versionDir
             set cdnHost ""
         } else {
-            # https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css
-            # https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+            # https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css
+            # https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js
             set prefix $cdn/$versionDir
         }
 
@@ -48,7 +48,9 @@ namespace eval openacs_bootstrap5_theme {
             urnMap {
                 urn:ad:css:bootstrap5 css/bootstrap.min.css
                 urn:ad:js:bootstrap5  js/bootstrap.bundle.min.js
-            }
+            } \
+            versionCheckURL "https://cdnjs.com/libraries?q=bootstrap"
+
         #urn:ad:js:popper2     dist/umd/popper.min.js
 
         if {$cdnHost ne ""} {
