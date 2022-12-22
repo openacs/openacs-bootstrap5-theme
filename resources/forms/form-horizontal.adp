@@ -105,7 +105,7 @@
 							
            <if @elements.help_text@ not nil>
              <span class="col-sm-offset-2 col-sm-10 form-text">
-  	         <adp:icon name="form-info-sign">
+  	         <adp:icon name="form-info-sign">&nbsp;
                  <noparse><formhelp id="@elements.id@"></noparse>
              </span> <!-- /form-text -->
            </if>

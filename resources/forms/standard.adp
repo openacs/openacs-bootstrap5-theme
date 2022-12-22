@@ -102,7 +102,7 @@
 							
            <if @elements.help_text@ not nil>
              <span class="form-text">
-       	         <adp:icon name="form-info-sign">
+       	         <adp:icon name="form-info-sign">&nbsp;
                  <noparse><formhelp id="@elements.id@"></noparse>
              </span> <!-- /form-text -->
            </if>
