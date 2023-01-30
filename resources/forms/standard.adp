@@ -19,12 +19,7 @@
        </if>
         
 	   <else> <!-- wrap the form item in the form-group class -->
-	       <if @elements.widget;literal@ in radio checkbox>
-	           <div class="form-check mb-3">
-	       </if>
-	       <else>
-	           <div class="form-group mb-3">
-	       </else>
+	     <div class="mb-3">
            <noparse>
 			 <formerror id="@elements.id@">
 			   <span class="form-error">
@@ -86,14 +81,21 @@
 
 		     <if @elements.widget;literal@ in radio checkbox>
                            <noparse>
-                 <formgroup id="@elements.id@" class="form-check-input">	
+                <formgroup id="@elements.id@" class="form-check-input">
+                  <div class="form-check">
                     \@formgroup.widget;noquote@
 				   <label class="form-check-label" for="@elements.form_id@:elements:@elements.id@:\@formgroup.option@">
 					 \@formgroup.label;noquote@
 				   </label>
+				   </div>
 				 </formgroup>
 			   </noparse>
              </if>
+             <elseif @elements.widget;literal@ in select>
+               <noparse>
+                 <formwidget id="@elements.id@" class="form-select">
+               </noparse>
+             </elseif>
 			 <else>
 			   <noparse>
                    <formwidget id="@elements.id@" class="form-control">
