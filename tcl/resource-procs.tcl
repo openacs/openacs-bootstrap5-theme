@@ -1,5 +1,5 @@
 namespace eval openacs_bootstrap5_theme {
-    set bootstrap_version 5.3.1
+    set bootstrap_version 5.3.2
 
     ad_proc -private ::openacs_bootstrap5_theme::resource_info {} {
 
