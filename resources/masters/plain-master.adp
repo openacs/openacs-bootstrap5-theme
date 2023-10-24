@@ -42,7 +42,7 @@
     <nav class="navbar fixed-bottom navbar-light bg-light border-top">
       <div class="container-fluid text-center justify-content-center">
         <p class="mb-0" style="color:#666; font-size: 80%">
-              This website is maintained by the OpenACS community. Any problems, email <a href="mailto:@signatory@">webmaster</a> or <a href="/bugtracker/openacs.org/">submit</a> a bug report.
+              This website is maintained by the OpenACS community. Any problems, email <a href="mailto:@signatory@">webmaster</a> or <a href="https://openacs.org/bugtracker/openacs.org/">submit</a> a bug report.
 <br>
               (Powered by Tcl<a href="http://www.tcl.tk/"><img alt="Tcl Logo" src="/resources/openacs-bootstrap5-theme/images/plume.png" width="14" height="13"></a>, 
                 Next Scripting <a href="https://next-scripting.org/"><img alt="NSF Logo" src="/resources/openacs-bootstrap5-theme/images/next-icon.png" width="14" height="8"></a>, 
