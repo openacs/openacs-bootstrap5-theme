@@ -34,6 +34,13 @@ if {!$user_id} {
     if {[ns_set get $f form:id] eq "login"} {
         ns_set delkey $f password
     }
+    #
+    # Do not pass the __csrf_token via return_url. This seems to cause
+    # problems with web vulnerability scanners, that poison the token
+    # value.
+    #
+    ns_set delkey $f __csrf_token
+    
     set return_url [ad_return_url]    
     set login_p 0
     set login_url [export_vars -base ${subsite_url}register/ return_url]
