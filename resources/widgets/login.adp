@@ -27,5 +27,5 @@
     </li>
 </if>
 <else>
-    <li class="nav-item"><a href="@login_url@">Log In</a></li>
+    <li class="nav-item"><a class="nav-link" href="@login_url@">Log In</a></li>
 </else>  
