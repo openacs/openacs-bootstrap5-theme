@@ -39,7 +39,7 @@ for {set i 1} {$i <= [template::multirow size navigation]} {incr i} {
         if {[info exists submenus($nav_parent)]} {
             set submenus($nav_parent) "$submenus($nav_parent) $item_html"
         } else {
-            set submenus($nav_parent) ""
+            set submenus($nav_parent) "$item_html"
         }
     }
 }
