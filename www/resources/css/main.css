@@ -119,6 +119,10 @@ div.list-inline-filters .btn-primary:active {
 }
 
 /********** Forms **************/
+span.form-label {
+    font-size: larger;
+}
+
 div.form-required-mark, strong.form-required-mark {
     font-size: 0;
     color:transparent;

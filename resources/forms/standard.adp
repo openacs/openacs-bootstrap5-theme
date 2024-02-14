@@ -79,28 +79,30 @@
 	    </if>
 	  </else>
 
-	  <if @elements.widget;literal@ in radio checkbox>
-            <noparse>
-              <formgroup id="@elements.id@" class="form-check-input">
-                <div class="form-check">
-                  \@formgroup.widget;noquote@
-		  <label class="form-check-label" for="@elements.form_id@:elements:@elements.id@:\@formgroup.option@">
-		    \@formgroup.label;noquote@
-		  </label>
-		</div>
-	      </formgroup>
-	    </noparse>
-          </if>
-          <elseif @elements.widget;literal@ in select>
-            <noparse>
-              <formwidget id="@elements.id@" class="form-select">
-            </noparse>
-          </elseif>
-	  <else>
-	    <noparse>
-              <formwidget id="@elements.id@" class="form-control">
-	    </noparse>
-          </else>
+          <div>
+	    <if @elements.widget;literal@ in radio checkbox>
+              <noparse>
+                <formgroup id="@elements.id@" class="form-check-input">
+                  <div class="form-check">
+                    \@formgroup.widget;noquote@
+		    <label class="form-check-label" for="@elements.form_id@:elements:@elements.id@:\@formgroup.option@">
+		      \@formgroup.label;noquote@
+		    </label>
+		  </div>
+	        </formgroup>
+	      </noparse>
+            </if>
+            <elseif @elements.widget;literal@ in select>
+              <noparse>
+                <formwidget id="@elements.id@" class="form-select">
+              </noparse>
+            </elseif>
+	    <else>
+	      <noparse>
+                <formwidget id="@elements.id@" class="form-control">
+	      </noparse>
+            </else>
+          </div>
 
           <if @elements.help_text@ not nil>
             <span class="form-text">
