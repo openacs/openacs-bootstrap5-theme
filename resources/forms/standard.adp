@@ -93,14 +93,26 @@
 	      </noparse>
             </if>
             <elseif @elements.widget;literal@ in select>
-              <noparse>
-                <formwidget id="@elements.id@" class="form-select">
-              </noparse>
+              <if @elements.mode;literal@ ne "display" and @elements.widget;literal@ ne "inform">
+                 <noparse>
+                   <formwidget id="@elements.id@" class="form-select">                   
+                 </noparse>
+              </if><else>
+                 <noparse>
+                   <div class="bg-light"><formwidget id="@elements.id@" class="form-select"></div>
+                 </noparse>
+              </else>
             </elseif>
 	    <else>
-	      <noparse>
-                <formwidget id="@elements.id@" class="form-control">
-	      </noparse>
+              <if @elements.mode;literal@ ne "display" and @elements.widget;literal@ ne "inform">
+	         <noparse>
+                   <formwidget id="@elements.id@" class="form-control">
+	         </noparse>
+               </if><else>
+	         <noparse>
+                   <div class="bg-light"><formwidget id="@elements.id@" class="form-control"></div>
+	         </noparse>
+               </else>
             </else>
           </div>
 
