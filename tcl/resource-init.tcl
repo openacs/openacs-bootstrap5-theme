@@ -32,7 +32,7 @@ foreach URN [dict keys [dict get $resource_info urnMap]] {
 #
 template::register_urn \
     -urn urn:ad:js:jquery \
-    -resource /resources/openacs-bootstrap5-theme/js/jquery-3.6.3.min.js
+    -resource /resources/openacs-bootstrap5-theme/js/jquery-3.7.1.min.js
 
 # Local variables:
 #    mode: tcl
