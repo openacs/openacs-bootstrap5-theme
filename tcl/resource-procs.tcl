@@ -21,20 +21,21 @@ namespace eval openacs_bootstrap5_theme {
         #
         set resourceDir   [acs_package_root_dir openacs-bootstrap5-theme/www/resources/bootstrap]
         set resourceUrl   /resources/openacs-bootstrap5-theme/bootstrap
-        set cdnHost       cdn.jsdelivr.net
-        set cdn           //$cdnHost/npm
         set version       $openacs_bootstrap5_theme::bootstrap_version
-        set versionDir    bootstrap@$version/dist
+        set versionDir    $version
+        set cdn           //cdnjs.cloudflare.com/ajax/libs/bootstrap
 
         if {[file exists $resourceDir/$versionDir]} {
-            set prefix $resourceUrl/$versionDir
+            set prefix  $resourceUrl/$version
             set cdnHost ""
         } else {
-            # https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css
-            # https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js
-            set prefix $cdn/$versionDir
+            #
+            # Use CDN
+            #
+            set prefix $cdn/$version
+            set cdnHost cdnjs.cloudflare.com
         }
-
+        
         lappend result \
             resourceName "Bootstrap 5" \
             resourceDir $resourceDir \
@@ -51,6 +52,7 @@ namespace eval openacs_bootstrap5_theme {
             } \
             versionCheckURL https://cdnjs.com/libraries/bootstrap \
             versionCheckAPI {cdn cdnjs library bootstrap count 1} \
+            vulnerabilityCheckURL https://snyk.io/advisor/npm-package/bootstrap \
             installedVersion $version
 
         #urn:ad:js:popper2     dist/umd/popper.min.js
