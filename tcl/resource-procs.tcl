@@ -50,9 +50,8 @@ namespace eval openacs_bootstrap5_theme {
                 urn:ad:css:bootstrap5 css/bootstrap.min.css
                 urn:ad:js:bootstrap5  js/bootstrap.bundle.min.js
             } \
-            versionCheckURL https://cdnjs.com/libraries/bootstrap \
             versionCheckAPI {cdn cdnjs library bootstrap count 1} \
-            vulnerabilityCheckURL https://snyk.io/advisor/npm-package/bootstrap \
+            vulnerabilityCheck {service snyk library bootstrap} \
             installedVersion $version
 
         #urn:ad:js:popper2     dist/umd/popper.min.js
