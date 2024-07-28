@@ -5,8 +5,8 @@ ad_page_contract {
 } {
 }
 
-set version $::openacs_bootstrap5_theme::bootstrap_version
 set resource_info [::openacs_bootstrap5_theme::resource_info]
+set version [dict get $resource_info installedVersion]
 
 set title "[dict get $resource_info resourceName] - Sitewide Admin"
 set context [list $title]

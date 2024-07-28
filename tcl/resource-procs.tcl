@@ -1,7 +1,11 @@
 namespace eval openacs_bootstrap5_theme {
+    variable bootstrap_version
+    
     set bootstrap_version 5.3.3
 
-    ad_proc -private ::openacs_bootstrap5_theme::resource_info {} {
+    ad_proc -private ::openacs_bootstrap5_theme::resource_info {
+        {-version ""}
+    } {
 
         Get information about available version(s) of the bootstrap
         packages. The goal is to deliver resources either from the
@@ -11,6 +15,11 @@ namespace eval openacs_bootstrap5_theme {
                 cdnHost, prefix, cssFiles, jsFiles and extraFiles.
 
     } {
+
+        if {$version eq ""} {
+            set version $::openacs_bootstrap5_theme::bootstrap_version
+        }
+        
         #
         # Provide paths for loading either via /resources/ or CDN
         #
@@ -21,7 +30,7 @@ namespace eval openacs_bootstrap5_theme {
         #
         set resourceDir   [acs_package_root_dir openacs-bootstrap5-theme/www/resources/bootstrap]
         set resourceUrl   /resources/openacs-bootstrap5-theme/bootstrap
-        set version       $openacs_bootstrap5_theme::bootstrap_version
+        
         set versionDir    $version
         set cdn           //cdnjs.cloudflare.com/ajax/libs/bootstrap
 
