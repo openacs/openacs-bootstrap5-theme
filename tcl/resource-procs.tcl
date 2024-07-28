@@ -25,16 +25,16 @@ namespace eval openacs_bootstrap5_theme {
         #
         #   "resourceDir" is the absolute path in the filesystem
         #   "resourceUrl" is the URL path provided to the request processor
-        #   "versionDir" is the version-specific element both in the
+        #   "versionSegment" is the version-specific element both in the
         #                URL and in the filesystem.
         #
         set resourceDir   [acs_package_root_dir openacs-bootstrap5-theme/www/resources/bootstrap]
         set resourceUrl   /resources/openacs-bootstrap5-theme/bootstrap
         
-        set versionDir    $version
+        set versionSegment    $version
         set cdn           //cdnjs.cloudflare.com/ajax/libs/bootstrap
 
-        if {[file exists $resourceDir/$versionDir]} {
+        if {[file exists $resourceDir/$versionSegment]} {
             set prefix  $resourceUrl/$version
             set cdnHost ""
         } else {
@@ -48,7 +48,7 @@ namespace eval openacs_bootstrap5_theme {
         lappend result \
             resourceName "Bootstrap 5" \
             resourceDir $resourceDir \
-            versionDir $versionDir \
+            versionSegment $versionSegment \
             cdn $cdn \
             cdnHost $cdnHost \
             prefix $prefix \
