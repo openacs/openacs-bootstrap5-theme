@@ -58,7 +58,7 @@ namespace eval openacs_bootstrap5_theme {
             } \
             versionCheckAPI {cdn cdnjs library bootstrap count 1} \
             vulnerabilityCheck {service snyk library bootstrap} \
-            installedVersion $version
+            configuredVersion $version
 
         #urn:ad:js:popper2     dist/umd/popper.min.js
 
