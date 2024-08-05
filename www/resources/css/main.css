@@ -264,7 +264,7 @@ a.acs-lang-missing:hover {
     color: red;
 }
 
-body ul.action-links li:before {
+body ul.action-links > li:before {
     font-family: 'bootstrap-icons' !important;
     content:  "\f134"; /* bi-arrow-right-circle */
     margin-top: 2px;
@@ -273,6 +273,6 @@ body ul.action-links li:before {
     margin-left: -22px;
     float: left;
 }
-body ul.action-links li {
+body ul.action-links > li {
     list-style: none;
 }
