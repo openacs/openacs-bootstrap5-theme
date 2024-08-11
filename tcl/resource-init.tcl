@@ -1,24 +1,7 @@
 #
 # Register some URNs that we are providing for sharing.
 #
-set resource_info [::openacs_bootstrap5_theme::resource_info]
-set version       [dict get $resource_info configuredVersion]
-set prefix        [dict get $resource_info prefix]
-
-foreach URN [dict keys [dict get $resource_info urnMap]] {
-    ns_log notice REGISTER=[list template::register_urn \
-        -urn $URN \
-        -resource $prefix/[dict get $resource_info urnMap $URN] \
-        -csp_list [expr {[dict exists $resource_info cspMap $URN]
-                         ? [dict get $resource_info cspMap $URN]
-                         : ""}]]
-    template::register_urn \
-        -urn $URN \
-        -resource $prefix/[dict get $resource_info urnMap $URN] \
-        -csp_list [expr {[dict exists $resource_info cspMap $URN]
-                         ? [dict get $resource_info cspMap $URN]
-                         : ""}]
-}
+::util::resources::register_urns -namespace openacs_bootstrap5_theme
 
 #
 # Strictly speaking, jquery is not necessary for bootstrap 5. However,
