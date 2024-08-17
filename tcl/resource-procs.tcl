@@ -46,12 +46,16 @@ namespace eval openacs_bootstrap5_theme {
         if {[file exists $resourceDir/$versionSegment]} {
             set prefix  /resources/openacs-bootstrap5-theme/bootstrap/$version
             set cdnHost ""
+            set cspMap ""
         } else {
             #
             # Use CDN
             #
             set prefix $cdn/$version
             set cdnHost cdnjs.cloudflare.com
+            dict set cspMap urn:ad:css:bootstrap5 style-src $cdnHost
+            dict set cspMap urn:ad:css:bootstrap5 font-src $cdnHost
+            dict set cspMap urn:ad:js:bootstrap5 script-src $cdnHost
         }
 
         lappend result \
@@ -68,24 +72,13 @@ namespace eval openacs_bootstrap5_theme {
                 urn:ad:css:bootstrap5 css/bootstrap.min.css
                 urn:ad:js:bootstrap5  js/bootstrap.bundle.min.js
             } \
+            cspMap $cspMap \
             versionCheckAPI {cdn cdnjs library bootstrap count 1} \
             vulnerabilityCheck {service snyk library bootstrap} \
             parameterInfo $parameter_info \
             configuredVersion $version
 
         #urn:ad:js:popper2     dist/umd/popper.min.js
-
-        if {$cdnHost ne ""} {
-            lappend result cspMap [subst {
-                urn:ad:css:bootstrap5 {
-                    style-src $cdnHost
-                    font-src $cdnHost
-                }
-                urn:ad:js:bootstrap5 {
-                    script-src $cdnHost
-                }
-            }]
-        }
         return $result
     }
 }
