@@ -1,7 +1,7 @@
 #
 # Register some URNs that we are providing for sharing.
 #
-::util::resources::register_urns -namespace openacs_bootstrap5_theme
+::util::resources::register_urns -prefix openacs_bootstrap5_theme
 
 #
 # Strictly speaking, jquery is not necessary for bootstrap 5. However,
