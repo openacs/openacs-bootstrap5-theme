@@ -9,11 +9,11 @@
     <implements-subsite-p>f</implements-subsite-p>
     <inherit-templates-p>f</inherit-templates-p>
     
-    <version name="6.0.0d1" url="http://openacs.org/repository/download/apm/openacs-bootstrap5-theme-6.0.0d1.apm">
+    <version name="6.0.0d2" url="http://openacs.org/repository/download/apm/openacs-bootstrap5-theme-6.0.0d2.apm">
         <owner url="mailto:manderga@wu.ac.at">manderga</owner>
         <owner url="mailto:neumann@wu.ac.at">Gustaf Neumann</owner>
         <summary>Theme for OpenACS based on Twitter Bootstrap 5</summary>
-        <release-date>2024-09-02</release-date>
+        <release-date>2024-11-07</release-date>
 	<vendor url="http://wu.ac.at">WU Vienna</vendor>
         <description format="text/plain">This package provides a theme based on
 	Twitter Bootstrap 5. The theme can be activated via
@@ -23,9 +23,8 @@
         <license>GPL version 2</license>
         <maturity>2</maturity>
 
-        <provides url="openacs-bootstrap5-theme" version="6.0.0d1"/>
-	<requires url="acs-tcl" version="5.10.1"/>
-        <requires url="acs-kernel" version="5.10.1"/>
+        <provides url="openacs-bootstrap5-theme" version="6.0.0d2"/>
+	<requires url="acs-tcl" version="6.0.0d3"/>
         <requires url="acs-subsite" version="5.10.1"/>
         <requires url="bootstrap-icons" version="0.2"/>
         <requires url="acs-templating" version="6.0.0d5"/>

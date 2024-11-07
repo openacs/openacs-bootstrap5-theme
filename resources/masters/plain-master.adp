@@ -24,7 +24,7 @@
     <if @user_messages:rowcount@ gt 0>
         <div id="bootstrap5-alert-message">
             <multiple name="user_messages">
-                <div class="alert alert-success">
+                <div class="alert alert-@user_messages.severity@">
 		    <a class="btn-close" data-bs-dismiss="alert">×</a>
 		    <i class="bi bi-info-square-fill"></i>
                     @user_messages.message;noquote@
