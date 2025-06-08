@@ -6,7 +6,7 @@ namespace eval openacs_bootstrap5_theme {
     set parameter_info {
         package_key openacs-bootstrap5-theme
         parameter_name BootstrapVersion
-        default_value 5.3.3
+        default_value 5.3.6
     }
 
     ad_proc -private ::openacs_bootstrap5_theme::resource_info {
@@ -40,19 +40,23 @@ namespace eval openacs_bootstrap5_theme {
         #                URL and in the filesystem.
         #
         set resourceDir    [acs_package_root_dir openacs-bootstrap5-theme/www/resources/bootstrap]
-        set versionSegment $version
-        set cdn            //cdnjs.cloudflare.com/ajax/libs/bootstrap
+        #set cdn            //cdnjs.cloudflare.com/ajax/libs/bootstrap
+        #set versionSegment $version
+        set cdn            //cdn.jsdelivr.net/npm
+        set versionSegment bootstrap@$version/dist
 
         if {[file exists $resourceDir/$versionSegment]} {
-            set prefix  /resources/openacs-bootstrap5-theme/bootstrap/$version
+            set prefix  /resources/openacs-bootstrap5-theme/bootstrap/$versionSegment
             set cdnHost ""
             set cspMap ""
         } else {
             #
             # Use CDN
             #
-            set prefix $cdn/$version
-            set cdnHost cdnjs.cloudflare.com
+            #set prefix $cdn/$version
+            #set cdnHost cdnjs.cloudflare.com
+            set cdnHost cdn.jsdelivr.net
+            set prefix $cdn/$versionSegment
             dict set cspMap urn:ad:css:bootstrap5 style-src $cdnHost
             dict set cspMap urn:ad:css:bootstrap5 font-src $cdnHost
             dict set cspMap urn:ad:js:bootstrap5 script-src $cdnHost
@@ -73,7 +77,7 @@ namespace eval openacs_bootstrap5_theme {
                 urn:ad:js:bootstrap5  js/bootstrap.bundle.min.js
             } \
             cspMap $cspMap \
-            versionCheckAPI {cdn cdnjs library bootstrap count 1} \
+            versionCheckAPI {cdn jsdelivr library bootstrap count 1} \
             vulnerabilityCheck {service snyk library bootstrap} \
             parameterInfo $parameter_info \
             configuredVersion $version
