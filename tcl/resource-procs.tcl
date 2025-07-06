@@ -6,7 +6,7 @@ namespace eval openacs_bootstrap5_theme {
     set parameter_info {
         package_key openacs-bootstrap5-theme
         parameter_name BootstrapVersion
-        default_value 5.3.6
+        default_value 5.3.7
     }
 
     ad_proc -private ::openacs_bootstrap5_theme::resource_info {
