@@ -16,7 +16,7 @@
     <!-- START HEADER -->
     <div class="row header">     
         <widget src="header-bar" ds="0" &="subsite_logo" &="navigation" &="subsite_url" &="subsite_name">
-        <widget src="search" ds="0">
+        <if @with_search_p@ true><widget src="search" ds="0"></if>
         <if @context_bar@ defined and @context_bar@ ne ""> <div class="m-0 col-12 context">@context_bar;noquote@</div> </if>
     </div>
     <!-- END HEADER -->

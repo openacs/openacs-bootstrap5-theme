@@ -71,6 +71,9 @@ if { [info exists prefer_text_only_p]
 # User messages
 util_get_user_messages -multirow user_messages
 
+# Display site-wide search, when we have a package of type search mounted
+set with_search_p [llength [::acs::site_node get_urls_from_package_key -package_key search]]
+
 #
 # Security settings
 #
