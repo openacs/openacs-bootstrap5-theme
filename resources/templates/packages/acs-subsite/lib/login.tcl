@@ -18,9 +18,9 @@ ad_include_contract {
     {email ""}
 }
 
-if {[ns_conn method] eq "POST"} {
-    ad_log notice "BOOTSTRAP LOGIN\nheaders: [ns_set array [ns_conn headers]]\nPOST data\n[ns_conn content]"
-}
+# if {[ns_conn method] eq "POST"} {
+#     ad_log notice "BOOTSTRAP LOGIN\nheaders: [ns_set array [ns_conn headers]]\nPOST data\n[ns_conn content]"
+# }
 
 # Redirect to HTTPS if so configured
 if { [security::RestrictLoginToSSLP] } {
